@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+
+<h1>Products</h1>
+
+<a href="/add">Add product</a>
+
+<ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }} - {{ product.price }}
+
+            <a href="/delete/{{ product.id }}">Delete</a>
+            <a href="/edit/{{ product.id }}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
